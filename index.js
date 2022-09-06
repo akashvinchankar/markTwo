@@ -1,16 +1,16 @@
-var readLineSync = require('readline-sync'); 
+var readLineSync = require('readline-sync');
 
-var score  = 0;
+var score = 0;
 
 console.log("Give the Country name from which the respective Bike brand is there")
 
-function riverQuiz(bikeName, originCountry){
+function riverQuiz(bikeName, originCountry) {
   var userAnswer = readLineSync.question(bikeName);
 
-  if(userAnswer.toUpperCase() === originCountry.toUpperCase()){
+  if (userAnswer.toUpperCase() === originCountry.toUpperCase()) {
     console.log("Right!");
     score++;
-  }else{
+  } else {
     console.log("Wrong!");
   }
   console.log("----------------");
@@ -40,8 +40,8 @@ var ques = [{
 }];
 
 
-for(var i=0; i<ques.length; i++){
+for (var i = 0; i < ques.length; i++) {
   riverQuiz(ques[i].bikeName, ques[i].originCountry);
 }
 
-console.log("You scored "+score+" correct answers out of " + ques.length);
+console.log("You scored " + score + " correct answers out of " + ques.length);
